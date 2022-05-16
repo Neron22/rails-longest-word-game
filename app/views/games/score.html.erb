@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="title">
+    <h1>Score</h1>
+  </div>
+
+  <div class="card">
+    <%if @word_api['found']%>
+      <p> <strong>Bien joué !</strong> "<%= @word.capitalize %>" est bon et a une longueur de <%= @word_api['length'] %> lettres.</p>
+    <% else %>
+      <p><strong>Déso poto !</strong> Ton mot "<%= @word.capitalize %>" n'est pas connu dans le dico anglais.</p>
+    <% end %>
+
+    <%= link_to "Rejouer", new_path %>
+  </div>
+</div>
